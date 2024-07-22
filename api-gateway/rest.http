@@ -1,0 +1,31 @@
+POST localhost:8083/product-microservice/products
+Content-Type: application/json
+
+{"title":  "iPad 9",
+"price":  600,
+"quantity":  4}
+
+###
+POST localhost:8083/orders-service/orders
+Content-Type: application/json
+
+{
+  "productId":"7c8e8e95-3d4c-4e54-b80f-c1a460b3495a",
+  "quantity":1,
+  "addressId":"afbb5881-a872-4d13-993c-faeb8350eea5"
+}
+
+
+###
+POST localhost:8083/product-microservice/management/eventProcessor/product-group/reset
+Content-Type: application/json
+
+
+###
+GET localhost:8083/product-microservice/products
+
+###
+PUT localhost:8082/products
+
+###
+DELETE localhost:8082/products

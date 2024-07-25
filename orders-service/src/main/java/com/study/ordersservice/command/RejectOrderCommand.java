@@ -7,6 +7,6 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 public class RejectOrderCommand {
 
     @TargetAggregateIdentifier
-    private final String orderId;
-    private final String reason;
+    String orderId;
+    String reason;
 }
